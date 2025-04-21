@@ -1,0 +1,56 @@
+/* thanks.css */
+
+body {
+    background-color: #fff;
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 背景の大きな Thank you テキスト */
+body::before {
+    content: "Thank you";
+    font-size: 160px;
+    color: rgba(0, 0, 0, 0.05);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* 表示するメッセージ＆ボタン */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+}
+
+.container p {
+    font-size: 20px;
+    color: #6b4c3b;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.home-button {
+    background-color: #6b4c3b;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.home-button:hover {
+    background-color: #5a3d30;
+}

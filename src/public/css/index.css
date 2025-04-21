@@ -1,0 +1,199 @@
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    color: #4B2E2B;
+    margin: 0;
+    padding: 0;
+}
+
+/* フォーム全体 */
+form > div {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* コンテナ */
+.container {
+    max-width: 700px;
+    background-color: #ffffff;
+    padding: 40px;
+    margin: 60px auto;
+}
+
+/* タイトル */
+h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #4B2E2B;
+}
+
+/* フォーム全体 */
+form > div {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* ラベルと「※」を横並びに見せる */
+form label {
+    display: inline-flex;
+    align-items: center;
+    width: 180px;
+    font-weight: bold;
+    color: #4B2E2B;
+    padding-top: 10px;
+    flex-shrink: 0;
+}
+
+/* ラベルに付く「※」のスタイル */
+form label::after {
+    content: attr(data-required);
+    color: red;
+    margin-left: 4px;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+/* ラベルなし要素は全幅 */
+form > div.full {
+    display: block;
+}
+
+/* 入力欄共通 */
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    font-size: 14px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* お名前（姓・名）の横並び */
+.name-group {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+}
+.name-group > div {
+    flex: 1;
+}
+
+/* ラジオボタン */
+.radio-group {
+    display: flex;
+    gap: 20px;
+    padding-top: 8px;
+}
+.radio-group label {
+    font-weight: normal;
+    width: auto;
+} 
+
+/* ラジオボタン選択時の焦茶色 */
+.radio-group input[type="radio"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #4B2E2B;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 5px;
+    cursor: pointer;
+}
+/* ラジオボタン選択時の焦茶色な「●」 */
+.radio-group input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #4B2E2B;
+    border-radius: 50%;
+}
+
+/* ラジオ選択中のラベルの文字色 */
+.radio-group input[type="radio"]:checked + span {
+    color: #4B2E2B;
+}
+
+/* ラジオラベルの表示を調整 */
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: normal;
+    color: #888; /* デフォルトはグレーっぽく */
+}
+
+/* 電話番号：3つ横並び */
+.tel-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.tel-group input[type="text"] {
+    width: 60px;
+    text-align: center;
+}
+
+/* セレクトボックス */
+select {
+    background-color: #f0f0f0;
+}
+
+/* テキストエリア */
+textarea {
+    resize: vertical;
+}
+
+/* 「お問い合わせの種類」幅を狭くしたい */
+.half-width {
+    flex: 0.5;
+}
+
+/* エラーメッセージ */
+.text-danger {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* エラーを正しく表示するための余白確保 */
+form .error-wrap {
+    margin-top: 5px;
+}
+
+/* 建物名（任意）のラベル */
+form label:not([data-required])::after {
+    content: '';
+}
+
+/* 確認ボタン */
+form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4B2E2B;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 30px;
+}
+
+form button:hover {
+    background-color: #3a1e1c;
+}
+
+/* ボタン中央揃え */
+form > .button-wrapper {
+    display: block;
+    text-align: center;
+}

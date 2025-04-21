@@ -1,0 +1,270 @@
+/* === 見出し === */
+h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #4B2E2B;
+    display: flex;
+    justify-content: center;
+}
+
+/* === 検索フォーム === */
+.search-form {
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #4B2E2B;
+}
+
+.search-form .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.search-form input,
+.search-form select,
+.search-form button,
+.search-form a {
+    padding: 8px;
+    font-size: 14px;
+    color: #4B2E2B;
+}
+
+.input-wide {
+    width: 320px;
+}
+
+.search-form button {
+    background-color: #4B2E2B;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.search-form a {
+    text-decoration: none;
+    background-color: #DEB887;
+    color: #fff;
+    line-height: 2.5;
+}
+
+/* === エクスポートボタン === */
+.export-btn {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.export-btn a {
+    background-color: #f0f0f0;
+    color: #550000;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* === テーブルデザイン === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    color: #4B2E2B;
+}
+
+table thead th {
+    background-color: #5C4033;
+    color: #fff;
+    border-top: 1px solid #5C4033;
+    border-bottom: 1px solid #5C4033;
+}
+
+table tbody tr {
+    background-color: #ffffff;
+}
+
+table th,
+table td {
+    padding: 12px;
+    border-top: 1px solid #4B2E2B;
+    border-bottom: 1px solid #4B2E2B;
+    border-left: none;
+    border-right: none;
+    text-align: left;
+}
+
+/* 最初と最後の列だけ外枠 */
+table td:first-child,
+table th:first-child {
+    border-left: 1px solid #4B2E2B;
+}
+
+table td:last-child,
+table th:last-child {
+    border-right: 1px solid #4B2E2B;
+}
+
+/* モーダル表示ボタン */
+.modal-btn {
+    color: #A67B5B;
+    background-color: #f0f0f0;
+    border: 1px solid #A67B5B;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+/* === ページネーション === */
+.pagination {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 10;
+}
+
+.pagination-nav {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.pagination-list {
+    display: inline-flex;
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    border: 1px solid #4B2E2B;
+}
+
+.pagination-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    border-left: 1px solid #4B2E2B;
+    color: #4B2E2B;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.pagination-item:first-child {
+    border-left: none;
+}
+
+.pagination-item.active {
+    background-color: #4B2E2B;
+    color: #fff;
+    pointer-events: none;
+}
+
+.pagination-item.disabled {
+    color: #aaa;
+    background-color: #f0f0f0;
+    pointer-events: none;
+}
+
+.pagination-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 36px;
+    color: inherit;
+    text-decoration: none;
+}
+
+/* === モーダル全体 === */
+#modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+
+/* モーダル内容 */
+#modal .modal-content {
+    background-color: #fff;
+    padding: 30px;
+    max-width: 600px;
+    margin: 20% auto;
+    position: relative;
+    color: #4B2E2B;
+    text-align: center;
+}
+
+/* モーダル内テキスト（左揃え） */
+#modal .modal-content p {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* ラベルと値を並列表示 */
+.modal-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ラベル */
+.modal-label {
+    width: 150px;
+    font-weight: bold;
+    flex-shrink: 0;
+    text-align: left;
+}
+
+/* 値 */
+.modal-value {
+    flex: 1;
+    word-break: break-word;
+    text-align: left;
+}
+
+.modal-detail {
+    align-items: flex-start;
+}
+
+.modal-detail .modal-value {
+    white-space: pre-wrap;
+}
+
+/* 削除ボタン */
+#modal form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#modal form button {
+    background-color: #A94442;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+#modal form button:hover {
+    background-color: #922D2D;
+}
+
+/* 閉じるボタン（×） */
+#modal .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    color: #4B2E2B;
+    border: 2px solid #4B2E2B;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#modal .modal-close:hover {
+    background-color: #f5f5f5;
+}

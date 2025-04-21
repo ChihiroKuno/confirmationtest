@@ -1,0 +1,77 @@
+/* ページ全体の背景 */
+body {
+    background-color: #f0f0f0; /* 薄いグレー */
+    font-family: Arial, sans-serif;
+    color: #4B2E2B; /* 焦茶色 */
+}
+
+/* タイトル */
+h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #4B2E2B;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+/* フォーム全体の枠 */
+form {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(75, 46, 43, 0.1); /* 軽いシャドウ */
+}
+
+/* ラベル（メール・パスワード） */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #4B2E2B;
+}
+
+/* 入力欄 */
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #f0f0f0; /* 薄いグレー背景 */
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* エラーメッセージ */
+form p {
+    margin-top: -15px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: red;
+}
+
+/* ログインボタン */
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent; /* 背景透明に */
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* ボタン内の文字だけに背景色 */
+form button span {
+    background-color: #4B2E2B; /* 焦茶背景 */
+    color: #fff; /* 白文字 */
+    padding: 6px 20px;
+    transition: background-color 0.2s;
+}
+
+/* ホバー時の色変化 */
+form button:hover span {
+    background-color: #3a1e1c; /* 濃い焦茶 */
+}
